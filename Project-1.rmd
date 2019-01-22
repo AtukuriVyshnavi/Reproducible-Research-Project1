@@ -51,7 +51,7 @@ totalsteps
 # sum the total steps per day
 x <- aggregate(steps ~ date, activity, sum)
 # plot the histogram and label
-plot(x$steps ~ x$date, type="h", lwd = 7, ylab="Frequency (steps)", xlab="Activity Days")
+hist(x$steps, type="h", lwd = 7, ylab="Frequency", xlab="steps",main="Total steps per day")
 ```
 
 3. Calculate and report the mean and median of the total number of steps taken per day
@@ -121,7 +121,9 @@ sum(!is.na(imputed$steps))
 # calculate the frequencies by day
 imputedsum <- aggregate(steps ~ date, imputed, sum)
 # plot the historgram and label
-plot(imputedsum$steps ~ imputedsum$date, type="h", lwd = 7, ylab="Imputed Frequency (steps)", xlab="Imputed Activity Days")  
+hist(imputedsum$steps, type="h", lwd = 7, ylab="Frequency", xlab="steps",main="Total steps per day with NA's Fixed",col="Black") hist(x$steps, type="h", lwd = 7, ylab="Frequency", xlab="steps",main="Total steps per day with NA's Fixed",col="grey")
+legend("topright",c("Imputed Data","Non-NA Data"),fill=c("Black","grey"))
+
 ```
   
    b. Calculate and report the mean and median total number of steps taken per day.
