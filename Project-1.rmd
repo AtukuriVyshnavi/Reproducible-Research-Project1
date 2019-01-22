@@ -1,7 +1,5 @@
 ---
-title: "Reproduciable Research Project 1"
-author: "Wahsabii Neandertal"
-date: "Sunday, April 19, 2015"
+title: "Reproduciable Research-Project 1"
 output: html_document
 ---
 
